@@ -12,4 +12,6 @@ Disclaimers: Correlation and causation are not the same, the recommendations thi
 
     Version: 1.0 code complete, some additional links and documentation will be added later. The next steps include adding a Google Colab notebook link so that it's accessible to a wider audience. Later I will pursue other deployment options.
 
-    Version: 1.1 Google Colab version complete and added
+    Version: 1.1 Google Colab version complete and added code tweeks
+
+    Version: 1.2 Deployment on Heroku code complete, extensive formatting tweeks required. In the interum app is not set to live until it is ready to go live.
