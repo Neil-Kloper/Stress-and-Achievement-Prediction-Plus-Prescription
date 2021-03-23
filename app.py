@@ -7,7 +7,7 @@ from tensorflow import keras
 app = Flask(__name__)
 
 
-model = keras.models.load_model('./wellbeing_model')
+model = keras.models.load_model('./model/wellbeing_model')
 x_columns = [
     'FRUITS_VEGGIES',
     'PLACES_VISITED',
