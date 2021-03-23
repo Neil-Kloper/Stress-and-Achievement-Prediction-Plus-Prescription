@@ -60,7 +60,7 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    list_pred = [x for x in request.form.values()]
+    list_pred = [int(x) for x in request.form.values()]
     pred_dict = {}
     pred_dict['Actual'] = list_pred
     idx = 0
