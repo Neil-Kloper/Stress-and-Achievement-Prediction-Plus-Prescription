@@ -7,7 +7,7 @@ from tensorflow import keras
 app = Flask(__name__)
 
 
-model = keras.models.load_model('C:/ML_Data/SADeploy')
+model = keras.models.load_model()
 x_columns = [
     'FRUITS_VEGGIES',
     'PLACES_VISITED',
@@ -56,7 +56,7 @@ wellbeing_stats = {
 
 @app.route('/')
 def home():
-    return render_template("C:/ML_Data/SADeploy/home.html")
+    return render_template("home.html")
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -85,7 +85,7 @@ def predict():
     personal_preds_batch[['DAILY_STRESS', 'ACHIEVEMENT']] = model.predict(personal_preds_batch)
     personal_preds_batch = personal_preds_batch[['DAILY_STRESS', 'ACHIEVEMENT']]
     result = personal_preds_batch.to_html()
-    return render_template('C:/ML_Data/SADeploy/home.html',pred=result)
+    return render_template('home.html',pred=result)
 
 # @app.route('/predict_api',methods=['POST'])
 # def predict_api():
